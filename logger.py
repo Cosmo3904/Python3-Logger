@@ -5,7 +5,7 @@ import time, os
 
 class logger:
         def __init__(self):
-                self.string = '[{}]\033[3{}m {} \033[0m'
+                self.string = '[{}]\033[3{}m {}\033[0m'
                 os.environ['TZ'] = 'EST+05EDT,M4.1.0,M10.5.0'
                 time.tzset()
         def log(self, msg, code):
