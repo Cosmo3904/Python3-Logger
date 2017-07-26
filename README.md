@@ -3,11 +3,13 @@ Simple Py3 Logger w/ Rainbow Text Support
 
 ## To Import and Use in Projects:
 
-1) copy logger.py to project directory
+1) edit line 9: os.environ['TZ'] = YOUR PERSONAL TIMEZONE CODE
 
-2) import logger().log to your project
+2) copy logger.py to project directory
 
-3) set log = logger().log (easiest to do this globally)
+3) import logger().log to your project
+
+4) set log = logger().log (easiest to do this globally)
 
 
 ## Usage
