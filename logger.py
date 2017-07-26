@@ -34,7 +34,7 @@ class logger:
                 length = len(msg) - 1
                 count = 0
                 colorstring = '\033[3{}m'
-                passstring = time.strftime('[%X %Z]')
+                passstring = time.strftime('[%X %Z] ')
                 rainbow = {'1':'1','2':'3','3':'2','4':'4','5':'5'}
                 raincount = 1
                 while count < length:
