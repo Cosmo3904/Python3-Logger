@@ -1,5 +1,5 @@
-# Python3-Logger by @Cosm00_
-Simple Py3 Logger w/ Rainbow Text Support
+# Python-Logger by @Cosm00_
+Simple Py 2 or 3 Logger w/ Rainbow Text Support
 
 ## To Import and Use in Projects:
 
