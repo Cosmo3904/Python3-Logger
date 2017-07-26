@@ -1,16 +1,16 @@
 #Written by @Cosm00_
 #Stay Based Youngins...
 
-import time, os, random
+import time, os
 
 class logger:
         def __init__(self):
-                self.string = '[{}] \033[3{}m {} \033[0m'
+                self.string = '[{}]\033[3{}m {} \033[0m'
                 os.environ['TZ'] = 'EST+05EDT,M4.1.0,M10.5.0'
                 time.tzset()
         def log(self, msg, code):
                 code = code.lower()
-                string = self.string.format(time.strftime('%X %Z'), '{}', msg)
+                string = self.string.format(time.strftime('%X %Z'), '{}', str(msg))
                 if code == 'red':
                         print(string.format('1'))
                 elif code == 'green':
@@ -43,11 +43,13 @@ class logger:
                         if msg[count:count + 1] == ' ':
                                 passstring = passstring + ' '
                                 count = count + 1
-                        else:       
+                        else:
                                 passstring = passstring + colorstring.format(rainbow[str(raincount)]) + msg[count:count + 1]
                                 count = count + 1
                                 raincount = raincount + 1
-                passstring = passstring + '\033[0m'
+                if raincount == 6:
+                    raincount = 1
+                passstring = passstring + colorstring.format(rainbow[str(raincount)]) + msg[len(msg) - 1:] + '\033[0m'
                 return(passstring)
 
 
@@ -62,4 +64,3 @@ if __name__ == '__main__':
         log(' | |/ _ \/ _` | __/ _` / __/ __|', 'rain')
         log(" | |  __/ (_| | || (_| \__ \__ \"", 'rain')
         log(' |_|\___|\__,_|\__\__,_|___/___/', 'rain')
-
